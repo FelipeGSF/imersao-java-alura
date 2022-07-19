@@ -2,6 +2,8 @@
 
 Projeto Java da Alura para consumir uma API do IMDb e mostrar os Top Filmes e gerar stickers para o WhatsApp.
 
+![imersao-java-alura](https://github.com/FelipeGSF/imersao-java-alura/blob/main/imers%C3%A3o.png)
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
