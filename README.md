@@ -1,3 +1,7 @@
+## Sobre
+
+Projeto Java da Alura para consumir uma API do IMDb e mostrar os Top Filmes e gerar stickers para o WhatsApp.
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
