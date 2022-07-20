@@ -1,4 +1,5 @@
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -24,6 +25,7 @@ public class App {
 
         // exibir e manipular os dados
         for (Map<String, String> filme : listaDeFilmes) {
+            new StickersGenerator().create(new URL(filme.get("image")).openStream(), filme.get("title"), filme.get("imDbRating"));
             System.out.println();
             System.out.println("\u001b[38;2;255;209;0m" + filme.get("title") + "\u001b[0m");
             System.out.println("\u001b[38;2;42;122;228m" +filme.get("image") + "\u001b[0m");
@@ -31,7 +33,7 @@ public class App {
             Double x = Double.parseDouble(filme.get("imDbRating"));
             Long estrelas = Math.round(x);
             for (int stars = 0; stars < estrelas; stars++) {
-                System.out.printf("\u2b50");
+                System.out.printf("⭐"); //\u2b50
             }
             System.out.println("\n");
             System.out.println("-----------------------------------------------------------------");
