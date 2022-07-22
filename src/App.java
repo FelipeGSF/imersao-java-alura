@@ -1,23 +1,16 @@
 import java.net.URL;
 import java.util.List;
-import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        //salva o endereço da API desejada
-        String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060"; //IMDB MOCKIDATA
-        // String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json"; //NASA MOCKIDATA
+        API minhaAPI = API.MEME;
 
         // fazer uma conexão HTTP e buscar os conteúdos da API
         ClienteHttp http = new ClienteHttp();
-        String json = http.buscaDados(url);
+        String json = http.buscaDados(minhaAPI.url());
 
-
-        // exibir e manipular os dados
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
-        // ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNASA();
-        List<Conteudo> conteudos = extrator.extraiConteudos(json);
+        List<Conteudo> conteudos = minhaAPI.extrator().extraiConteudos(json);
 
         for (Conteudo conteudo : conteudos) {
             

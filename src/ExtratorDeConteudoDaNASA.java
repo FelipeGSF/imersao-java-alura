@@ -4,6 +4,7 @@ import java.util.Map;
 
 public class ExtratorDeConteudoDaNASA implements ExtratorDeConteudo{
 
+  @Override
   public List<Conteudo> extraiConteudos(String json) {
 
     // extrair só os dados que interessa (títulos, postees, classificação)
@@ -16,7 +17,7 @@ public class ExtratorDeConteudoDaNASA implements ExtratorDeConteudo{
 
     //popula a lista com Conteudos
     for (Map<String, String> atributos : listaAtributosJson) {
-      String titulo = atributos.get("title");
+      String titulo = atributos.get("title").replace(":", " -");
       //String urlImagem = atributos.get("url").replaceAll("(@+)(.*).jpg$", "$1.jpg");
       String urlImagem = atributos.get("url");
 
