@@ -4,7 +4,7 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        API minhaAPI = API.MEME;
+        API minhaAPI = API.LOCAL;
 
         // fazer uma conexão HTTP e buscar os conteúdos da API
         ClienteHttp http = new ClienteHttp();

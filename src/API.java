@@ -7,7 +7,9 @@ public enum API {
       new ExtratorDeConteudoDaNASA()),
 
   MEME("https://api.mocki.io/v2/549a5d8b/Memes",
-      new ExtratorDeConteudoDeMeme());
+      new ExtratorDeConteudoDeMeme()),
+
+  LOCAL("http://localhost:8080/linguagens", new ExtratordeConteudoDeLocalHost());
 
   private String url;
   private ExtratorDeConteudo extrator;
